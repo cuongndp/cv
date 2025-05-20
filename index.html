@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Menu 3 gạch</title>
+  <style>
+    /* CSS ở đây - ví dụ tạo 3 gạch và ẩn menu */
+    .menu-icon {
+      width: 30px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .bar {
+      width: 70%;
+      height: 2px;
+      background-color: black;
+      margin: 2px 0;
+    }
+
+    .nav {
+      display: none;
+      
+    }
+
+    .nav.show {
+      display: flex;
+    }
+  </style>
 </head>
 <body>
-    <a href="cv.html">cv</a>
+
+  <!-- Biểu tượng 3 gạch -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Menu bị ẩn -->
+  <div class="nav" id="navMenu">
+    <a href="#">Trang chủ</a>
+    <a href="#">Giới thiệu</a>
+    <a href="#">Liên hệ</a>
+  </div>
+
+  <!--  JavaScript đặt ở cuối -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
 </body>
 </html>
