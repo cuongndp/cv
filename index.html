@@ -2,10 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Menu Ẩn</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Thanh menu ẩn */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    /* Icon menu */
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Nền xám khi mở menu */
+    .overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .sidebar.active {
+      width: 250px;
+      z-index: 2;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <a style="font-size: 50px;" href="cv.html">cv</a>
+
+<!-- Icon menu -->
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<!-- Menu ẩn -->
+<div id="mySidebar" class="sidebar">
+  <a href="#">Trang chủ</a>
+  <a href="#">CV Cường</a>
+  <a href="#">CV Phong</a>
+  <a href="#">CV Bằng</a>
+  <a href="#">CV Đăng</a>
+</div>
+
+<!-- Nền mờ khi mở menu -->
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mySidebar").classList.toggle("active");
+    document.getElementById("overlay").classList.toggle("active");
+  }
+</script>
+
 </body>
 </html>

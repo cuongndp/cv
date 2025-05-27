@@ -1,3 +1,4 @@
+/* root này là để chỉnh màu dễ hơn */
 :root {
     --menubar: rgb(24, 97, 180);
     --bgcolor: #beb8ac;
@@ -10,6 +11,7 @@
     --gray2: rgb(148, 147, 147);
 }
 
+/* * là để app dụng cho toàn bộ trong code */
 * {
     margin: 0px;
     padding: 0px;
@@ -17,84 +19,30 @@
     font-family: monospace;
 }
 
+/* phần body này chỉnh màu nền và chỉnh chiều rộng của trang */
 body {
     background-color: var(--bgcolor);
+    width: 100vw;
 }
 
+
+/* class clearfix này là dùng để xuống dòng vì trong bài có dùng float left nên nếu ko có thẻ này nó sẽ ko xuống dòng được */
 .clearfix {
     clear: both;
 }
 
+
+/* class này chỉnh chiều cao, rộng, nền, bo tròn góc, khoảng cách của phần cv với bên trên và chỉnh bóng */
 .khung {
-    width: 800px;
-    height: 940px;
-    margin: 100px auto;
+    width: 900px;
+    height: 1090px;
+    margin: 50px auto;
     background: var(--white);
     box-shadow: 5px 21px 20px 20px #3d3f4238;
     border-radius: 10px 10px 0 0;
 
-}
-
-.menubar {
-    background-color: var(--menubar);
-    width: 800px;
-    height: 40px;
-    border-radius: 10px 10px 0 0;
-
-}
-
-.home {
-    z-index: 9;
-    float: left;
-    width: 100px;
-    height: 100%;
-    color: white;
-    border-radius: 10px 0 0 0;
-    background-color: rgb(22, 132, 168);
-    overflow: hidden;
-}
-
-.home span {
-    float: left;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    padding-top: 8px;
-    padding-left: 10px;
-    border: 1px solid white;
-    border-radius: 10px;
-
-}
-
-.home p {
-    text-transform: uppercase;
-    padding-left: 5px;
-    float: left;
-    font-weight: bold;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(3, 2, 2);
-    padding-top: 14px;
-
-}
-
-.home:hover {
-    transform: scale(1.2);
-    border-radius: 10px;
-}
-
-.link {
-    float: left;
-    width: 175px;
-    height: 40px;
-    color: white;
-background-color: var(--menubar);
-}
-
-.link:hover {
-    transform: scale(1.2);
-    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .i {
@@ -109,90 +57,23 @@ background-color: var(--menubar);
     padding-left: 10px;
 }
 
-.link p {
-    text-transform: uppercase;
-    padding-left: 5px;
-    float: left;
-    width: 130px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(0, 0, 0);
-    padding-top: 14px;
-}
-
-.link-cuoi {
-    float: left;
-    width: 175px;
-    height: 40px;
-    color: white;
-background-color: rgb(22, 132, 168);
-}
-
-.link-cuoi:hover {
-    transform: scale(1.2);
-    border-radius: 10px;
-}
-
-
-
-.link-cuoi p {
-    text-transform: uppercase;
-    padding-left: 5px;
-    float: left;
-    width: 130px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(0, 0, 0);
-    padding-top: 14px;
-}
-
-.link-giua {
-    float: left;
-    width: 175px;
-    height: 40px;
-    color: white;
-background-color: rgb(22, 132, 168);
-}
-
-.link-giua:hover {
-    transform: scale(1.2);
-    border-radius: 10px;
-}
-
-
-
-.link-giua p {
-    text-transform: uppercase;
-    padding-left: 5px;
-    float: left;
-    width: 130px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 13px;
-    font-family: 'Quicksand', sans-serif;
-    color: rgb(10, 6, 6);
-    padding-top: 14px;
-}
-
-
+/* class này là để chỉnh cho phần nội dung nằm bên trái của cái khung cv */
 .table-left {
-    float: left;
-    width: 250px;
-    height: 900px;
+    /* float: left; */
+    width: 300px;
+    height: 1090px;
     background: var(--black);
 }
 
+
+/* đây là một thẻ để tạo ra một nửa màu phía sau ảnh đại diện trong trang web */
 .blue-box {
-    width: 257px;
-    height: 407px;
+    width: 299px;
+    height: 450px;
     background: var(--blue);
     margin-left: -100px;
-    transform: rotateZ(48deg);
-    margin-top: -178px;
+    transform: rotateZ(54deg);
+    margin-top: -230px;
 }
 
 .div-img {
@@ -200,11 +81,13 @@ background-color: rgb(22, 132, 168);
     position: relative;
 }
 
+
+/* class này để chỉnh ảnh trong trang web căn đúng vị trí giữa và chỉnh kích thước nó  */
 .img {
     position: absolute;
     z-index: 9;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
@@ -215,7 +98,7 @@ background-color: rgb(22, 132, 168);
 .name {
     color: var(--gray);
     text-align: center;
-    margin-top: -34px;
+    margin-top: -30px;
     font-size: 30px;
     letter-spacing: 2px;
 
@@ -255,7 +138,7 @@ background-color: rgb(22, 132, 168);
 }
 
 .p1 {
-    width: 230px;
+    width: 250px;
     margin: 0 auto;
     color: var(--gray);
     margin-top: 25px;
@@ -279,7 +162,7 @@ background-color: rgb(22, 132, 168);
 }
 
 .p1-email {
-    width: 230px;
+    width: 250px;
     margin: 0 auto;
     color: var(--gray);
     margin-top: 25px;
@@ -291,8 +174,38 @@ background-color: rgb(22, 132, 168);
     float: -1;
 }
 
+.p1-github {
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 25px;
+    color: var(--gray);
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 25px;
+
+}
+.span1 img
+{
+    width: 35px;
+    border-radius: 5px;
+    margin-left: -4px;
+}
+.Email a
+{
+    text-decoration: none;
+color: #d8dce4;
+}
+.github a
+{
+    text-decoration: none;
+color: #d8dce4;
+}
+
+
+
+/* class này là chỉnh cho phần nội dung phía bên phải trong cv */
 .table-right {
-    float: left;
+    /* float: left; */
     width: 550px;
     height: 1000px;
 
@@ -301,8 +214,6 @@ background-color: rgb(22, 132, 168);
 .icon-table-right i {
     font-size: 26px;
     float: left;
-    /* margin-top: 10px;
-    margin-left: 10px; */
     text-align: center;
     width: 30px;
     top: 50%;
@@ -337,7 +248,6 @@ background-color: rgb(22, 132, 168);
 .px {
     padding-top: 20px;
     float: left;
-    /* padding-bottom: 10px; */
 }
 
 .p4-1 {
@@ -411,13 +321,13 @@ background-color: rgb(22, 132, 168);
 
 .div-skill2 div {
     height: 100%;
-    width: 65%;
+    width: 50%;
     background-color: rgb(225, 162, 16);
 }
 
 .div-skill3 div {
     height: 100%;
-    width: 72%;
+    width: 44%;
     background-color: rgb(225, 162, 16);
 }
 
@@ -430,3 +340,100 @@ background-color: rgb(22, 132, 168);
 .div-class-myskill {
     width: 510px;
 }
+
+.duan 
+{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.du-an img
+{
+    width: 300px;
+}
+.du-an 
+{
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+.chung-chi
+{
+    clear: both;
+    text-align: center;
+    margin-top: 55px;
+    font-weight: bold;
+}
+
+
+
+/* Thanh menu ẩn */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    /* Icon menu */
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Nền xám khi mở menu */
+    .overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .sidebar.active {
+      width: 250px;
+      z-index: 2;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+
+    .list-inline-item
+    {
+        margin-left: 55px;
+        margin-top: 20px;
+        float: left;
+        list-style-type: none;
+        margin-right: 70px;
+
+    }
+    .list-inline-item i
+    {
+        font-size: 30px;
+    }
