@@ -1,71 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CV - Lê Hải Bằng</title>
-  <link rel="stylesheet" href="CV_Bang.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Lê Hải Băng</title>
+    <link rel="stylesheet" href="CV_Bang.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <img src="./anhthe.jpg">
-      <h2>LÊ HẢI BẰNG</h2>
-      <h4>WEB DEVELOPER</h4>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="./anhthe.jpg" alt="Lê Hải Băng" class="profile-img">
+                </div>
+                <div class="name">Lê Hải Bằng</div>
+                <div class="title">Web Developer</div>
+            </div>
 
-      <div class="section">
-        <h3>Contact Info</h3>
-        <p><i class="bi bi-telephone"></i> Điện thoại: 0769 408 725</p>
-        <p><i class="bi bi-envelope"></i> Gmail: <a href="mailto:banglh1811@ut.edu.vn">banglh1811@ut.edu.vn</a></p>
-        <p><i class="bi bi-facebook"></i> Facebook: <a href="https://www.facebook.com/le.bang.413400">lebang2005.com</a></p>
-        <p><i class="bi bi-github"></i> Github: <a href="https://github.com/haibang25?tab=overview&from=2025-05-01&to=2025-05-27">https://github.com</a></p>
-        <p><i class="bi bi-geo-alt"></i> Địa chỉ: Phú Hòa, Phú Yên</p>
-      </div>
+            <div class="section">
+                <h3 class="section-title"><i class="bi bi-person-lines-fill"></i> Thông tin liên hệ</h3>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="bi bi-telephone"></i></span>
+                    <span>0769 408 725</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="bi bi-envelope"></i></span>
+                    <a href="mailto:banglh1811@ut.edu.vn">banglh1811@ut.edu.vn</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="bi bi-facebook"></i></span>
+                    <a href="https://www.facebook.com/le.bang.413400">lebang2005.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="bi bi-github"></i></span>
+                    <a href="https://github.com/haibang25">GitHub.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon"><i class="bi bi-geo-alt"></i></span>
+                    <span>Phú Hòa, Phú Yên</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="bi bi-award"></i> Giải thưởng</h3>
+                <div class="award-status">Không có</div>
+                <p style="font-size: 12px; margin-top: 10px; opacity: 0.8;">Đang nỗ lực để đạt được những thành tựu đáng kể trong lĩnh vực web development</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title"><i class="bi bi-person-hearts"></i> Sở thích</h3>
+                <div class="interests">
+                    <span class="interest-tag"><i class="bi bi-film"></i> Xem phim</span>
+                    <span class="interest-tag"><i class="bi bi-controller"></i> Chơi game</span>
+                    <span class="interest-tag"><i class="bi bi-suitcase-fill"></i> Du lịch</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="objective">
+                <h2> Mục tiêu nghề nghiệp</h2>
+                <p>Trở thành lập trình viên web chuyên nghiệp, thiết kế và phát triển các website, ứng dụng hiệu quả, thân thiện với người dùng. Không ngừng nâng cao kỹ năng lập trình và đóng góp vào các dự án sáng tạo trong môi trường công nghệ năng động.</p>
+            </div>
+
+            <div class="content-section">
+                <h2><i class="bi bi-mortarboard-fill"></i> Học vấn</h2>
+                <div class="education-item">
+                    <div class="item-title">Hiện tại</div>
+                    <div class="item-subtitle">Sinh viên năm 2 - Trường Đại học Giao Thông Vận Tải TP.HCM</div>
+                    <div class="item-description">Đang theo học chuyên ngành Công nghệ thông tin, tích cực tham gia các dự án học tập và nghiên cứu về phát triển web.</div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2><i class="bi bi-projector"></i> Dự án đã thực hiện</h2>
+                <div class="experience-item">
+                    <div class="item-title">Hệ thống quản lý đào tạo</div>
+                    <div class="item-subtitle">Môn Thiết kế hệ thống • Điểm: 8/10</div>
+                    <div class="item-description">
+                        Phát triển hệ thống quản lý đào tạo hoàn chỉnh với các tính năng: quản lý khóa học, học viên, giảng viên, lịch học và theo dõi tiến độ học tập. Sử dụng HTML/CSS/JavaScript cho frontend và database để lưu trữ dữ liệu. Dự án được đánh giá cao về tính năng và giao diện user-friendly.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Database Design</span>
+                        <span class="tech-tag">System Analysis</span>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="item-title">Website Portfolio cá nhân</div>
+                    <div class="item-subtitle">Dự án học tập</div>
+                    <div class="item-description">
+                        Thiết kế và phát triển website portfolio cá nhân responsive, showcase các dự án và kỹ năng. Áp dụng các kỹ thuật modern CSS, animation và tối ưu SEO.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Responsive Design</span>
+                        <span class="tech-tag">CSS Animation</span>
+                        <span class="tech-tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2><i class="bi bi-gear-fill"></i> Kỹ năng chuyên môn</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">HTML</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">CSS</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">UML Diagrams</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Photoshop</div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="right">
-      <div class="profile">
-        <h3>Profile</h3>
-        <p>
-A dedicated and passionate Information Technology student currently pursuing a Bachelor's degree at UTH (University of Transport and Communications – Campus 3, Ho Chi Minh City). With a strong foundation in programming, databases, and software development, I am highly interested in applying technology to address real-world challenges. I am eager to develop my professional skills, continuously learn new technologies, and contribute effectively to innovative and impactful tech projects.        </p>
-      </div>
-
-      <div class="experience">
-        <h3>Experience</h3>
-        <div class="job">
-          <h4>Senior UI Designer – Công ty XYZ</h4>
-          <small>2021 – Present</small>
-          <p>Thiết kế giao diện web hiện đại, phối hợp với dev tối ưu hóa UX/UI.</p>
-        </div>
-        <div class="job">
-          <h4>Front-end Developer – Công ty ABC</h4>
-          <small>2019 – 2021</small>
-          <p>Phát triển giao diện HTML/CSS/JS, bảo trì và nâng cao hiệu suất.</p>
-        </div>
-        <div class="job">
-          <h4>Intern Developer – Công ty DEF</h4>
-          <small>2016 – 2019</small>
-          <p>Học việc và hỗ trợ lập trình web, làm việc cùng các mentor kỹ thuật.</p>
-        </div>
-      </div>
-
-      <div class="skills">
-        <h3>Professional Skills</h3>
-        <p>HTML</p>
-        <div class="skill-bar"><span style="width: 95%;"></span></div>
-        <p>CSS</p>
-        <div class="skill-bar"><span style="width: 90%;"></span></div>
-        <p>JavaScript</p>
-        <div class="skill-bar"><span style="width: 75%;"></span></div>
-        <p>Photoshop</p>
-        <div class="skill-bar"><span style="width: 65%;"></span></div>
-        <p>Illustrator</p>
-        <div class="skill-bar"><span style="width: 60%;"></span></div>
-        <p>Adobe XD</p>
-        <div class="skill-bar"><span style="width: 60%;"></span></div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
