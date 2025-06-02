@@ -1,95 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Menu Ẩn</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Thanh menu ẩn */
-    .sidebar {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #333;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 60px;
-    }
-
-    .sidebar a {
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 18px;
-      color: white;
-      display: block;
-      transition: 0.2s;
-    }
-
-    .sidebar a:hover {
-      background-color: #575757;
-    }
-
-    /* Icon menu */
-    .menu-icon {
-      font-size: 30px;
-      cursor: pointer;
-      padding: 15px;
-      background-color: #333;
-      color: white;
-    }
-
-    /* Nền xám khi mở menu */
-    .overlay {
-      position: fixed;
-      display: none;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-
-    .sidebar.active {
-      width: 250px;
-      z-index: 2;
-    }
-
-    .overlay.active {
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Component - VitaMeds</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <footer class="footer">
+        <div class="container">
+            <!-- Team Members Section -->
+            <div class="team-section">
+                <div class="section-title" style="margin: 0 0 40px 0;">
+                    <h2 style="color: #ecf0f1;">Thành Viên Nhóm</h2>
+                    <p style="color: #bdc3c7;">Đội ngũ phát triển website</p>
+                </div>
+                
+                <a href="./cv-cuong/cv.html">
+                  <div class="team-grid">
+                      <div class="team-member">
+                          <div class="member-avatar">
+                              <img src="./cv-cuong/download.png" alt="Nguyễn Đăng Phúc Cường">
+                          </div>
+                          <div class="member-name">Nguyễn Đăng Phúc Cường</div>
+                          <!-- <div class="member-role">Team Leader - Backend Developer</div> -->
+                          <div class="member-id">MSSV: 054205000736</div>
+                      </div>
+                </a>
+                    
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="./cv-phong/images/anhcanha.jpg" alt="Trần Thị Bình">
+                        </div>
+                        <div class="member-name">Nguyễn Văn Phong</div>
+                        <!-- <div class="member-role">Frontend Developer - UI/UX</div> -->
+                        <div class="member-id">MSSV: 21010002</div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="./cv-bang/anhthe.jpg" alt="Lê Minh Cường">
+                        </div>
+                        <div class="member-name">Lê Hải Bằng</div>
+                        <!-- <div class="member-role">Database Administrator</div> -->
+                        <div class="member-id">MSSV: 21010003</div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/avatar4.jpg" alt="Phạm Thị Dung">
+                        </div>
+                        <div class="member-name">Lý Khánh Đăng</div>
+                        <!-- <div class="member-role">Quality Assurance - Tester</div> -->
+                        <div class="member-id">MSSV: 21010004</div>
+                    </div>
+                </div>
+            </div>
 
-<!-- Icon menu -->
-<div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-<!-- Menu ẩn -->
-<div id="mySidebar" class="sidebar">
-  <a href="index.html">Trang chủ</a>
-  <a href="cv.html">CV Cường</a>
-  <a href="./cv-phong/cv.html">CV Phong</a>
-  <a href="CV_Bang.html">CV Bằng</a>
-  <a href="#">CV Đăng</a>
-</div>
-
-
-<!-- Nền mờ khi mở menu -->
-<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("mySidebar").classList.toggle("active");
-    document.getElementById("overlay").classList.toggle("active");
-  }
-</script>
-
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VitaMeds</h3>
+                    <p>Đồ án môn học: Lập trình Web<br>
+                    Trường: Đại học Giao thông vận tải</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Thông Tin Dự Án</h3>
+                    <ul>
+                        <li><a href="#">Mô tả dự án</a></li>
+                        <li><a href="#">Tài liệu kỹ thuật</a></li>
+                        <li><a href="#">Database Schema</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Source Code</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Công Nghệ Sử Dụng</h3>
+                    <ul>
+                        <li>Frontend: HTML5, CSS3, JavaScript</li>
+                        <li>Backend: PHP, MySQL</li>
+                        <li>Framework: Bootstrap</li>
+                        <li>Tools: VSCode, phpMyAdmin</li>
+                        <li>Version Control: Git, GitHub</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liên Hệ Nhóm</h3>
+                    <p><i class="fas fa-envelope"></i> vitameds.team@student.uit.edu.vn</p>
+                    <p><i class="fas fa-phone"></i> (+84) 123-456-789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Đại học Giao thông vận tải</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 VitaMeds - Đồ án Lập trình Web. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
