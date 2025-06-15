@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khánh Đăng</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="#home">Khánh Đăng</a>
+                </div>
+                
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="gioithieu.html" class="nav-link">Giới Thiệu</a></li>
+                    <li><a href="hocvan.html" class="nav-link">Học Vấn</a></li>
+                    <li><a href="kynang.html" class="nav-link">Kỹ Năng</a></li>
+                    <li><a href="duan.html" class="nav-link">Dự Án</a></li>
+                    <li><a href="lienhe.html" class="nav-link">Liên Hệ</a></li>
+                    <li class="nav-link">
+                        <button id="darkToggleBtn" onclick="toggleDarkMode()" style="background: none; border: none; color: inherit; font-size: 30px; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                            <i id="darkIcon" class="fas fa-moon"></i>
+                        </button>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="intro">Xin chào, mình là</p>
+                <h1>Khánh Đăng</h1>
+                <h2 class="typing">Sinh viên Công nghệ Thông tin năm hai </h2>
+                <p class="description">
+                    Với tôi, lập trình không chỉ là nghề nghiệp, mà còn là một cách thể hiện sáng tạo.
+                    Tôi yêu thích việc kết hợp giữa kỹ thuật và nghệ thuật để tạo ra những trang web bắt mắt và tối ưu.
+                    Ngoài thời gian học, tôi thường vẽ, chơi đàn và viết blog về công nghệ.
+                </p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Liên Hệ Ngay</a>
+                    <a href="#projects" class="btn btn-secondary">Xem Dự Án</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-image">
+                    <img src="images\hinh1.jpg" alt="Ảnh Cá Nhân">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Giới Thiệu</span></h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper1">
+                        <img src="images\hinh2.jpg" alt="Ảnh cá nhân 2">
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <h3>Thông tin cá nhân và nghề nghiệp</h3>
+                    <p>
+                        Tôi là Đăng, một sinh viên đam mê với việc kết hợp công nghệ và nghệ thuật. 
+                        Tôi luôn tin rằng nghệ thuật là cách tuyệt vời để kết nối mọi người và truyền tải những thông điệp có ý nghĩa.
+                    </p>
+                    <p>
+                        Tôi hướng đến việc trở thành một nhà phát triển phần mềm sáng tạo, kết hợp giữa kỹ thuật lập trình và cảm quan thẩm mỹ trong thiết kế. 
+                        Với nền tảng về CNTT cùng sở thích về nghệ thuật và âm nhạc, tôi mong muốn tạo ra những sản phẩm công nghệ mang tính cá nhân hóa 
+                        và truyền cảm hứng cho người dùng.
+                    </p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <p class="info-title"><i class="fas fa-user-circle"></i> Tên đầy đủ</p>
+                            <p>Lý Khánh Đăng</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-title"><i class="fa-solid fa-calendar"></i> Ngày sinh</p>
+                            <p>11/03/2005</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-title"><i class="fa-solid fa-heart"></i> Sở thích</p>
+                            <p>
+                                <i class="fa-solid fa-music" title="Âm nhạc"></i>
+                                <i class="fa-solid fa-guitar" title="Đàn"></i>
+                                <i class="fa-solid fa-palette" title="Vẽ"></i>
+                                <i class="fa-solid fa-gamepad" title="Game"></i>
+                            </p>
+
+                        </div>
+                        <div class="info-item">
+                            <p class="info-title"><i class="fas fa-envelope"></i> Email</p>
+                            <p>danglk4004@ut.edu.vn</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-title"><i class="fas fa-globe"></i> Website</p>
+                            <p>https://www.khanhdang.com</p>
+                        </div>
+
+                        <div class="info-item">
+                            <p class="info-title"><i class="fas fa-map-marker-alt"></i> Vị trí</p>
+                            <p>TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/aww.zackday" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.instagram.com/_xzack.yg/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@zackct_" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Học Vấn</span></h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="education-cards">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <div class="logo-placeholder">
+                            <img src="images\hinh3.jpg" alt="Logo UTH">
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3>Trường Đại học Giao thông vận tải TP. HCM</h3>
+                            <span class="year-badge">2023 - 2027</span>
+                        </div>
+                        <h4>Ngành Information Technology - Công nghệ Thông tin</h4>
+                        <p>
+                            Hiện tại tôi đang theo học chương trình IT tại Viện Công nghệ thông tin & Điện, Điện tử.
+                            Tôi đang dần hoàn thiện kỹ năng về HTML, CSS, JavaScript và MySQL, đồng thời làm quen 
+                            với các công cụ hỗ trợ lập trình như Git, GitHub và VS Code. 
+                            Bên cạnh đó, tôi có hứng thú với thiết kế giao diện (UI/UX) và đang học sử dụng Figma. 
+                            Tôi luôn nỗ lực rèn luyện kỹ năng mềm như làm việc nhóm, quản lý thời gian và chủ động 
+                            tự học để phát triển bản thân trong lĩnh vực Công nghệ Thông tin.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">C/ C++</span>
+                            <span class="tag">HTML/ CSS</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-logo">
+                        <div class="logo-placeholder">
+                            <img src="images\hinh3.jpg" alt="Logo UTH">
+                        </div>
+                    </div>
+                    <div class="education-content">
+                        <div class="education-header">
+                            <h3>Chứng chỉ - Giải thưởng</h3>
+                            <span class="year-badge purple">2023 - Hiện tại</span>
+                        </div>
+                        <h4>Không có</h4>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Kỹ Năng</span></h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skill-group">
+                    <h3>Kỹ Năng Chuyên Ngành</h3>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>UI/UX Design</p>
+                            <p class="percentage">85%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>C/ C++</p>
+                            <p class="percentage">80%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Java</p>
+                            <p class="percentage">60%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="60"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>HTML/CSS</p>
+                            <p class="percentage">70%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>VS Code</p>
+                            <p class="percentage">85%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="skill-group">
+                    <h3>Kỹ Năng Khác</h3>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Tiếng Anh</p>
+                            <p class="percentage">90%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Adobe Photoshop</p>
+                            <p class="percentage">90%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Adobe Illustrator</p>
+                            <p class="percentage">85%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Adobe After Effects</p>
+                            <p class="percentage">80%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <p>Adobe Premiere Pro</p>
+                            <p class="percentage">75%</p>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Dự Án</span></h2>
+                <div class="underline"></div>
+                <p>Một số dự án tiêu biểu mà tôi đã thực hiện trong quá trình học tập và làm việc.</p>
+            </div>
+            
+            <div class="project-cards">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images\hinhminhhoa1.jpg" alt="Hình minh họa 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Website</h3>
+                        <p>
+                            Đây là một trang web cá nhân được xây dựng bằng HTML, CSS và JavaScript. 
+                            Nó hiển thị thông tin cá nhân, kỹ năng và dự án của tôi. 
+                            Trang web này được thiết kế để giới thiệu bản thân một cách chuyên nghiệp và thu hút sự chú ý của nhà tuyển dụng.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag blue">HTML</span>
+                            <span class="project-tag blue">CSS</span>
+                            <span class="project-tag blue">JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images\hinhminhhoa2.jpg" alt="Hình minh họa 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>Update</h3>
+                        <p>
+                           ...
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag purple">...</span>
+                            <span class="project-tag purple">...</span>
+                            <span class="project-tag purple">...</span>
+                        </div>
+                        <a href="#" class="project-link">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Liên Hệ</span></h2>
+                <div class="underline"></div>
+                <p>Bạn có dự án cần thực hiện hoặc muốn hợp tác? Hãy liên hệ với tôi qua các phương thức dưới đây.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon blue">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Địa Chỉ</h3>
+                        <p>Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh</p>
+                        <p>TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon purple">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>danglk4004@ut.edu.vn</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon pink">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Điện Thoại</h3>
+                        <p>0345.085.613</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Gửi Tin Nhắn</h3>
+                    
+                    <form id="messageForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Họ và Tên</label>
+                                <input type="text" id="name" placeholder="Nhập họ tên của bạn" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Nhập email của bạn" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Tiêu Đề</label>
+                            <input type="text" id="subject" placeholder="Nhập tiêu đề tin nhắn" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tin Nhắn</label>
+                            <textarea id="message" rows="6" placeholder="Nhập nội dung tin nhắn của bạn" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            Gửi Tin Nhắn <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h2>Khánh Đăng</h2>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/aww.zackday" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.instagram.com/_xzack.yg/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@zackct_" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+
+                    <p>&copy; <span id="currentYear"></span> Khánh Đăng Lý. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

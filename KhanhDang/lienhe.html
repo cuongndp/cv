@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khánh Đăng</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">Khánh Đăng</a>
+                </div>
+                
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                    <li><a href="gioithieu.html" class="nav-link">Giới Thiệu</a></li>
+                    <li><a href="hocvan.html" class="nav-link">Học Vấn</a></li>
+                    <li><a href="kynang.html" class="nav-link">Kỹ Năng</a></li>
+                    <li><a href="duan.html" class="nav-link">Dự Án</a></li>
+                    <li><a href="lienhe.html" class="nav-link">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>            
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>Liên Hệ</span></h2>
+                <div class="underline"></div>
+                <p>Bạn có dự án cần thực hiện hoặc muốn hợp tác? Hãy liên hệ với tôi qua các phương thức dưới đây.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon blue">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Địa Chỉ</h3>
+                        <p>Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh</p>
+                        <p>TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon purple">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>danglk4004@ut.edu.vn</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon pink">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Điện Thoại</h3>
+                        <p>0345.085.613</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Gửi Tin Nhắn</h3>
+                    
+                    <form id="messageForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Họ và Tên</label>
+                                <input type="text" id="name" placeholder="Nhập họ tên của bạn" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Nhập email của bạn" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Tiêu Đề</label>
+                            <input type="text" id="subject" placeholder="Nhập tiêu đề tin nhắn" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tin Nhắn</label>
+                            <textarea id="message" rows="6" placeholder="Nhập nội dung tin nhắn của bạn" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            Gửi Tin Nhắn <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h2>Khánh Đăng</h2>
+                </div>
+                
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/aww.zackday" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.instagram.com/_xzack.yg/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@zackct_" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+
+                    <p>&copy; <span id="currentYear"></span> Khánh Đăng Lý. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
