@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Phong - Interactive CV</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <!-- Improved Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">NVP</div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Work</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <!-- Mega Visual Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-name">
+                <h1>Nguyễn<br>Văn Phong</h1>
+                <div class="hero-title">Sinh viên Công nghệ Thông tin</div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="image/download.png" alt="Ảnh đại diện" />
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">2nd</div>
+                    <div class="stat-label">Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number"> ∞ </div>
+                    <div class="stat-label">Learning</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Minimal About -->
+        <section id="about" class="about-section">
+            <div class="about-number">01</div>
+            <div class="about-content">
+                <h2 class="section-title">About</h2>
+                <p class="about-text">Sinh viên năm 2 ngành Công nghệ Thông tin tại ĐH Giao thông Vận tải, định hướng Full Stack Web &
+                    Mobile.</p>
+                <p class="about-text">Thành thạo Java OOP, Kotlin và Node.js,  yêu thích công nghệ mới và luôn tìm cách áp dụng vào dự án
+                    thực tế.</p>
+                
+            </div>
+            <div class="about-highlights">
+                <div class="highlight-item">
+                    <h4>🎯 System Analysis</h4>
+                </div>
+                <div class="highlight-item">
+                    <h4>📊 UML Diagrams</h4>
+                </div>
+                <div class="highlight-item">
+                    <h4>🗄️ Database Design</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Experience -->
+        <section id="experience" class="experience-section">
+            <div class="experience-grid">
+                <div class="experience-header">
+                    <h2 class="section-title">Goals & Projects</h2>
+                </div>
+                <div class="experience-item">
+                    <h3 class="job-title">Mục tiêu ngắn hạn</h3>
+                    <p class="company">Trở thành Full Stack Developer • Tập trung NodeJS Backend</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">NodeJS</span>
+                        <span class="tech-tag">Backend</span>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">Dự án học tập tiêu biểu</h3>
+                    <p class="company">Hệ thống Quản lý Sinh viên • Academic Project, 2024</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">UML</span>
+                        <span class="tech-tag">Phân tích hệ thống</span>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="job-title">Mục tiêu dài hạn</h3>
+                    <p class="company">Trở thành Mobile App Developer • Kỹ năng Full-stack</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Mobile</span>
+                        <span class="tech-tag">Full-stack</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Visual Projects -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-masonry">
+                <div class="project-card">
+                    <div class="project-image">🎓</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hệ thống quản lý sinh viên</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">UML</span>
+                            <span class="project-tag">Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📱</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mobile App Project</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Android</span>
+                            <span class="project-tag">Kotlin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web Development</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML/CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">NodeJS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🗄️</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Database Design</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Database</span>
+                            <span class="project-tag">Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animated Skills -->
+        <section id="skills" class="skills-section">
+            <div class="skills-container">
+                <div class="skills-sidebar">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skill-category-mini">
+                        <h4>Programming</h4>
+                        <p>Java, JavaScript, Kotlin</p>
+                    </div>
+                    <div class="skill-category-mini">
+                        <h4>Backend</h4>
+                        <p>NodeJS, OOP Concepts</p>
+                    </div>
+                    <div class="skill-category-mini">
+                        <h4>Analysis & Design</h4>
+                        <p>UML Diagrams, System Analysis</p>
+                    </div>
+                    <div class="skill-category-mini">
+                        <h4>Web Technologies</h4>
+                        <p>HTML/CSS, JavaScript</p>
+                    </div>
+                </div>
+
+                <div class="skills-main">
+                    <div class="skill-wheel">
+                        <div class="skill-wheel-text">
+                            <div>JAVA</div>
+                            <div>85%</div>
+                        </div>
+                    </div>
+                    <div class="skill-wheel"
+                        style="animation-direction: reverse; border-top-color: var(--accent-secondary);">
+                        <div class="skill-wheel-text">
+                            <div>NODEJS</div>
+                            <div>80%</div>
+                        </div>
+                    </div>
+                    <div class="skill-wheel" style="border-top-color: var(--accent-success);">
+                        <div class="skill-wheel-text">
+                            <div>UML</div>
+                            <div>90%</div>
+                        </div>
+                    </div>
+                    <div class="skill-wheel"
+                        style="animation-direction: reverse; border-top-color: var(--accent-secondary);">
+                        <div class="skill-wheel-text">
+                            <div>WEB</div>
+                            <div>75%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Contact -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-layout">
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 2rem; color: var(--accent-primary);">Send Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="3" placeholder="Message..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send</button>
+                    </form>
+                </div>
+
+                <div class="contact-divider">
+                    <div class="divider-line"></div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p>nguyenvanphong23122005@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📱 Phone</h4>
+                        <p>0366468477</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📍 University</h4>
+                        <p>Trường đại học giao thông vận tải </p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>💼 GitHub</h4>
+                        <p>github.com/nguyenvanphong</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
