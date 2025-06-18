@@ -1,23 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-            // Navigation functionality
+ document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all effects
             setupNavigation();
-            
-            // Check profile image
-            checkProfileImage();
-            
-            // Smooth animations
+            setupScrollProgress();
             setupAnimations();
-            
-            // Interactive effects
+            setupParticles();
+            setupMatrixRain();
+            checkProfileImage();
             setupInteractiveEffects();
+            
+            // Remove loading screen
+            setTimeout(() => {
+                document.querySelector('.loading-screen').style.display = 'none';
+            }, 2000);
         });
 
-        // Navigation Setup
+        // Custom Cursor
+        function setupCursor() {
+            const cursor = document.querySelector('.cursor');
+            const follower = document.querySelector('.cursor-follower');
+            
+            // Always show cursor for desktop
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 10 + 'px';
+                cursor.style.top = e.clientY - 10 + 'px';
+                
+                setTimeout(() => {
+                    follower.style.left = e.clientX - 20 + 'px';
+                    follower.style.top = e.clientY - 20 + 'px';
+                }, 100);
+            });
+
+            // Cursor interactions
+            document.querySelectorAll('a, button, .contact-card, .skill-card, .hobby-card').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(1.5)';
+                    follower.style.transform = 'scale(1.5)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    follower.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Navigation
         function setupNavigation() {
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('.section');
 
-            // Click navigation
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -38,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 let current = '';
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
                     if (window.pageYOffset >= sectionTop - 200) {
                         current = section.getAttribute('id');
                     }
@@ -53,37 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Profile Image Check
-        function checkProfileImage() {
-            const profileImg = document.getElementById('profileImg');
-            const profileImage = document.getElementById('profileImage');
+        // Scroll Progress Bar
+        function setupScrollProgress() {
+            const progressBar = document.querySelector('.scroll-progress');
             
-            if (profileImg && profileImg.src && profileImg.src !== '' && !profileImg.src.endsWith('/')) {
-                profileImg.style.display = 'block';
-                profileImage.classList.add('has-image');
-            } else {
-                profileImg.style.display = 'none';
-                profileImage.classList.remove('has-image');
-            }
-
-            // Observer for src changes
-            if (profileImg) {
-                const observer = new MutationObserver(function(mutations) {
-                    mutations.forEach(function(mutation) {
-                        if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
-                            checkProfileImage();
-                        }
-                    });
-                });
-                
-                observer.observe(profileImg, {
-                    attributes: true,
-                    attributeFilter: ['src']
-                });
-            }
+            window.addEventListener('scroll', () => {
+                const scrollTop = document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercent = (scrollTop / scrollHeight) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            });
         }
 
-        // Scroll Animations
+        // Animations
         function setupAnimations() {
             const observerOptions = {
                 threshold: 0.1,
@@ -96,35 +107,74 @@ document.addEventListener('DOMContentLoaded', function() {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
                         
-                        // Stagger animations for grid items
-                        const gridItems = entry.target.querySelectorAll('.skill-card, .hobby-card, .contact-card, .timeline-item');
-                        gridItems.forEach((item, index) => {
+                        // Stagger animations
+                        const items = entry.target.querySelectorAll('.skill-card, .hobby-card, .contact-card, .timeline-item');
+                        items.forEach((item, index) => {
                             setTimeout(() => {
                                 item.style.opacity = '1';
                                 item.style.transform = 'translateY(0)';
-                            }, index * 100);
+                            }, index * 150);
                         });
                     }
                 });
             }, observerOptions);
 
-            // Observe sections and their children
             document.querySelectorAll('.section').forEach(section => {
                 observer.observe(section);
-                
-                // Pre-set grid items for stagger animation
-                const gridItems = section.querySelectorAll('.skill-card, .hobby-card, .contact-card, .timeline-item');
-                gridItems.forEach(item => {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateY(30px)';
-                    item.style.transition = 'all 0.6s ease';
-                });
             });
+        }
+
+        // Floating Particles
+        function setupParticles() {
+            const container = document.querySelector('.bg-animation');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Matrix Rain Effect
+        function setupMatrixRain() {
+            const container = document.querySelector('.matrix-rain');
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            for (let i = 0; i < 20; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = Math.random() * 100 + '%';
+                column.style.animationDelay = Math.random() * 8 + 's';
+                
+                let text = '';
+                for (let j = 0; j < 20; j++) {
+                    text += characters.charAt(Math.floor(Math.random() * characters.length)) + '<br>';
+                }
+                column.innerHTML = text;
+                
+                container.appendChild(column);
+            }
+        }
+
+        // Profile Image Check
+        function checkProfileImage() {
+            const profileImg = document.getElementById('profileImg');
+            const profileImage = document.getElementById('profileImage');
+            
+            if (profileImg && profileImg.src && !profileImg.src.endsWith('/')) {
+                profileImg.style.display = 'block';
+                profileImage.classList.add('has-image');
+                document.querySelector('.avatar-placeholder').style.display = 'none';
+            }
         }
 
         // Interactive Effects
         function setupInteractiveEffects() {
-            // Add click effects to cards
+            // Card click effects
             document.querySelectorAll('.skill-card, .hobby-card, .timeline-card, .project-card').forEach(card => {
                 card.addEventListener('click', function() {
                     this.style.transform += ' scale(0.95)';
@@ -134,69 +184,54 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
 
-            // Profile image click effect
+            // Profile image special effect
             const profileImage = document.querySelector('.profile-image');
             if (profileImage) {
                 profileImage.addEventListener('click', function() {
-                    this.style.transform = 'translateY(-20px) scale(1.1) rotate(360deg)';
+                    this.style.animation = 'none';
                     setTimeout(() => {
-                        this.style.transform = 'translateY(-20px) scale(1) rotate(0deg)';
-                    }, 600);
+                        this.style.animation = 'gradientRotate 4s ease infinite, profileFloat 6s ease-in-out infinite';
+                    }, 100);
                 });
             }
 
-            // Typing effect for name
+            // Typewriter effect for name
             const nameElement = document.querySelector('.profile-name');
             if (nameElement) {
                 const nameText = nameElement.textContent;
                 nameElement.textContent = '';
                 
-                function typeWriter(text, element, speed = 100) {
-                    let i = 0;
-                    function type() {
-                        if (i < text.length) {
-                            element.textContent += text.charAt(i);
-                            i++;
-                            setTimeout(type, speed);
-                        }
-                    }
-                    type();
-                }
-                
                 setTimeout(() => {
-                    typeWriter(nameText, nameElement, 120);
+                    let i = 0;
+                    const typeWriter = () => {
+                        if (i < nameText.length) {
+                            nameElement.textContent += nameText.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, 100);
+                        }
+                    };
+                    typeWriter();
                 }, 1000);
             }
 
-            // Random color changes for skill cards
+            // Random glow effects
             setInterval(() => {
-                document.querySelectorAll('.skill-card').forEach(card => {
-                    const hue = Math.random() * 360;
-                    card.style.filter = `hue-rotate(${hue}deg)`;
-                    setTimeout(() => {
-                        card.style.filter = 'hue-rotate(0deg)';
-                    }, 2000);
-                });
-            }, 5000);
-
-            // Parallax effect for backgrounds
-            window.addEventListener('scroll', function() {
-                const scrolled = window.pageYOffset;
-                const sections = document.querySelectorAll('.section');
-                
-                sections.forEach((section, index) => {
-                    const rate = scrolled * -0.5;
-                    if (section.style.backgroundPosition !== undefined) {
-                        section.style.backgroundPosition = `center ${rate}px`;
+                const cards = document.querySelectorAll('.skill-card, .hobby-card');
+                cards.forEach(card => {
+                    if (Math.random() > 0.7) {
+                        card.style.boxShadow = '0 0 30px rgba(0, 255, 136, 0.6)';
+                        setTimeout(() => {
+                            card.style.boxShadow = '';
+                        }, 1000);
                     }
                 });
-            });
+            }, 3000);
         }
 
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
             const sections = ['profile', 'education', 'projects', 'skills', 'certificates', 'hobbies', 'contact'];
-            const currentSection = document.querySelector('.nav-link.active').getAttribute('href').substring(1);
+            const currentSection = document.querySelector('.nav-link.active')?.getAttribute('href')?.substring(1) || 'profile';
             const currentIndex = sections.indexOf(currentSection);
 
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
@@ -210,9 +245,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Easter egg: Konami code
+        // Konami code easter egg
         let konamiCode = [];
-        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 
         document.addEventListener('keydown', function(e) {
             konamiCode.push(e.keyCode);
@@ -221,23 +256,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (konamiCode.join(',') === konamiSequence.join(',')) {
-                // Activate easter egg
-                document.body.style.animation = 'rainbow 2s linear infinite';
-                
-                const style = document.createElement('style');
-                style.textContent = `
-                    @keyframes rainbow {
-                        0% { filter: hue-rotate(0deg); }
-                        100% { filter: hue-rotate(360deg); }
-                    }
-                `;
-                document.head.appendChild(style);
+                // Activate party mode
+                document.body.style.animation = 'rainbow 1s linear infinite';
                 
                 setTimeout(() => {
                     document.body.style.animation = '';
-                    if (style.parentNode) {
-                        style.parentNode.removeChild(style);
-                    }
-                }, 10000);
+                }, 5000);
             }
         });
+
+        // Performance optimization
+        let ticking = false;
+        function updateOnScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Scroll-based animations here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        window.addEventListener('scroll', updateOnScroll);

@@ -1,16 +1,28 @@
-<!DOCTYPE html>
+<!-- Matrix Rain Background -->
+    <div class="matrix-rain"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation"></div><!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Nguyễn Đăng Phúc Cường</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/index.css">
-       
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/index.css">
+        
     
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
     <!-- NAVIGATION MENU -->
     <nav class="nav-menu">
         <ul class="nav-list">
@@ -64,18 +76,12 @@
         <div class="container">
             <div class="profile-content">
                 <div class="profile-image" id="profileImage">
-                    <!-- 
-                    HƯỚNG DẪN THÊM ẢNH CÁ NHÂN:
-                    1. Thay src="" thành đường dẫn ảnh của bạn
-                    2. Ví dụ: src="https://example.com/avatar.jpg" 
-                    3. Hoặc: src="images/my-photo.jpg" (nếu ảnh trong thư mục local)
-                    -->
-                    <img src="./images.cuog/download.png" alt="Ảnh cá nhân" id="profileImg" style="display: none;">
-                    <div class="avatar-placeholder">👨‍🎓</div>
+                    <img src="images.cuog/download.png" alt="Ảnh cá nhân" id="profileImg" style="display: none;">
+                    <div class="avatar-placeholder">👨‍💻</div>
                 </div>
                 
                 <h1 class="profile-name">Nguyễn Đăng Phúc Cường</h1>
-                <p class="profile-title">Sinh viên Công nghệ Thông tin</p>
+                <p class="profile-title">Nhà Đổi Mới Công Nghệ Tương Lai</p>
                 
                 <div class="profile-stats">
                     <div class="stat-item">
@@ -83,8 +89,8 @@
                         <div class="stat-label">Tuổi</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Năm đại học</div>
+                        <div class="stat-number">02</div>
+                        <div class="stat-label">Năm ĐH</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">3.0</div>
@@ -99,19 +105,20 @@
     <section id="education" class="section education-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">🎓 Trình Độ Học Vấn</h2>
-                <p class="section-subtitle">Hành trình học tập và phát triển của tôi</p>
+                <h2 class="section-title">🎓 Hành Trình Học Tập</h2>
+                <p class="section-subtitle">Từ những bước đầu đến tương lai công nghệ</p>
             </div>
             
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-card">
-                        <div class="timeline-year">2023 - Hiện tại</div>
+                        <div class="timeline-year">2023 - 2027</div>
                         <h3 class="timeline-title">Cử nhân Công nghệ Thông tin</h3>
                         <p class="timeline-org">Trường Đại học Giao thông Vận tải (UTH)</p>
                         <p class="timeline-desc">
-                            Hiện đang học năm thứ hai. Đang học các môn cơ bản như Lập trình C++, Java, 
-                            Cơ sở dữ liệu và các môn lý thuyết chuyên ngành. GPA hiện tại: 3.0/4.0.
+                            Đang theo học năm thứ hai với niềm đam mê công nghệ. Tập trung vào các môn 
+                            lập trình C++, Java, cơ sở dữ liệu và phát triển web. Tích cực tham gia 
+                            các dự án nhóm và hoạt động ngoại khóa liên quan đến IT.
                         </p>
                     </div>
                 </div>
@@ -122,8 +129,9 @@
                         <h3 class="timeline-title">Tốt nghiệp THPT</h3>
                         <p class="timeline-org">Trường THPT Trần Quốc Tuấn</p>
                         <p class="timeline-desc">
-                            Tốt nghiệp loại khá với điểm số 8.5/10. Có niềm yêu thích với môn Tin học 
-                            và quyết định theo học ngành Công nghệ Thông tin.
+                            Hoàn thành chương trình trung học với thành tích khá. Phát hiện đam mê 
+                            với lập trình và công nghệ, tạo nền tảng vững chắc cho việc theo đuổi 
+                            ngành Công nghệ Thông tin.
                         </p>
                     </div>
                 </div>
@@ -135,23 +143,29 @@
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">💻 Dự Án</h2>
-                <p class="section-subtitle">Những dự án tôi đã thực hiện</p>
+                <h2 class="section-title">💼 Dự Án Nổi Bật</h2>
+                <p class="section-subtitle">Những thành quả đáng tự hào</p>
             </div>
             
             <div class="project-card">
-                <div class="project-icon">💼</div>
-                <h3 class="project-title">Đồ án Phân tích Thiết kế Hệ thống</h3>
+                <div class="project-icon">🚀</div>
+                <h3 class="project-title">
+                    <a href="https://drive.google.com/file/d/1CUEl0TSLoMkjQIUG25p-ta_OwgQ1lmYh/view?usp=sharing" target="_blank" style="color: inherit; text-decoration: none; transition: all 0.3s ease;">
+                        Hệ Thống Quản Lý Đào Tạo
+                    </a>
+                </h3>
                 <p class="project-desc">
-                    Dự án được thực hiện trong môn học "Phân tích và Thiết kế Hệ thống Thông tin". 
-                    Đây là bài tập lớn nhóm tập trung vào việc phân tích yêu cầu, thiết kế cơ sở dữ liệu 
-                    và giao diện người dùng cho một hệ thống quản lý đào tạo.
+                    Dự án capstone trong môn "Phân tích và Thiết kế Hệ thống Thông tin". 
+                    Xây dựng một hệ thống hoàn chỉnh từ phân tích yêu cầu, thiết kế database, 
+                    cho đến giao diện người dùng. Đây là bước đầu quan trọng trong việc 
+                    ứng dụng kiến thức lý thuyết vào thực tế.
                 </p>
                 <div class="project-tech">
-                    <span class="tech-tag">Phân tích hệ thống</span>
-                    <span class="tech-tag">Thiết kế CSDL</span>
-                    <span class="tech-tag">UML</span>
-                    <span class="tech-tag">Làm việc nhóm</span>
+                    <span class="tech-tag">Phân Tích Hệ Thống</span>
+                    <span class="tech-tag">Thiết Kế CSDL</span>
+                    <span class="tech-tag">Mô Hình UML</span>
+                    <span class="tech-tag">Lãnh Đạo Nhóm</span>
+                    <span class="tech-tag">Quản Lý Dự Án</span>
                 </div>
             </div>
         </div>
@@ -161,45 +175,45 @@
     <section id="skills" class="section skills-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">⚙️ Kỹ Năng</h2>
-                <p class="section-subtitle">Những kỹ năng tôi đang phát triển</p>
+                <h2 class="section-title">⚡ Kỹ Năng & Công Nghệ</h2>
+                <p class="section-subtitle">Arsenal công nghệ đang phát triển</p>
             </div>
             
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">💻</div>
+                    <div class="skill-icon">🔷</div>
                     <h3 class="skill-name">C++</h3>
-                    <p class="skill-level">Cơ bản</p>
+                    <p class="skill-level">Cơ Bản</p>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-icon">☕</div>
                     <h3 class="skill-name">Java</h3>
-                    <p class="skill-level">Cơ bản</p>
+                    <p class="skill-level">Tiến Bộ</p>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-icon">🌐</div>
-                    <h3 class="skill-name">HTML/CSS</h3>
-                    <p class="skill-level">Cơ bản</p>
+                    <h3 class="skill-name">Công Nghệ Web</h3>
+                    <p class="skill-level">HTML/CSS/JS</p>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-icon">🗄️</div>
                     <h3 class="skill-name">MySQL</h3>
-                    <p class="skill-level">Cơ bản</p>
+                    <p class="skill-level">Thiết Kế CSDL</p>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-icon">👥</div>
-                    <h3 class="skill-name">Làm việc nhóm</h3>
-                    <p class="skill-level">Tốt</p>
+                    <h3 class="skill-name">Làm Việc Nhóm</h3>
+                    <p class="skill-level">Chuyên Nghiệp</p>
                 </div>
                 
                 <div class="skill-card">
                     <div class="skill-icon">📊</div>
                     <h3 class="skill-name">MS Office</h3>
-                    <p class="skill-level">Trung bình</p>
+                    <p class="skill-level">Thành Thạo</p>
                 </div>
             </div>
         </div>
@@ -209,14 +223,17 @@
     <section id="certificates" class="section certificates-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">🏆 Chứng Chỉ - Giải Thưởng</h2>
-                <p class="section-subtitle">Thành tích và chứng chỉ đã đạt được</p>
+                <h2 class="section-title">🏆 Thành Tích & Chứng Chỉ</h2>
+                <p class="section-subtitle">Những mốc son trong hành trình</p>
             </div>
             
             <div class="no-content">
-                <div class="no-content-icon">📜</div>
-                <h3 class="no-content-title">Không có</h3>
-                <p class="no-content-desc">Đang trong quá trình học tập và tích lũy kinh nghiệm</p>
+                <div class="no-content-icon">🚫</div>
+                <h3 class="no-content-title">Không Có</h3>
+                <p class="no-content-desc">
+                    Đang trong quá trình học tập và tích lũy kinh nghiệm. 
+                    Sẽ cập nhật khi có thành tích mới!
+                </p>
             </div>
         </div>
     </section>
@@ -225,39 +242,39 @@
     <section id="hobbies" class="section hobbies-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">❤️ Sở Thích</h2>
-                <p class="section-subtitle">Những thứ tôi yêu thích trong thời gian rảnh</p>
+                <h2 class="section-title">❤️ Đam Mê & Sở Thích</h2>
+                <p class="section-subtitle">Những thứ làm tôi cảm thấy sống động</p>
             </div>
             
-            <div class="hobbies-grid">
+                            <div class="hobbies-grid">
                 <div class="hobby-card">
                     <div class="hobby-icon">🚴‍♂️</div>
-                    <h3 class="hobby-name">Đạp xe</h3>
+                    <h3 class="hobby-name">Đạp Xe</h3>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">🎵</div>
-                    <h3 class="hobby-name">Nghe nhạc</h3>
+                    <h3 class="hobby-name">Âm Nhạc</h3>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">🎮</div>
-                    <h3 class="hobby-name">Chơi game</h3>
+                    <h3 class="hobby-name">Chơi Game</h3>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">📚</div>
-                    <h3 class="hobby-name">Đọc sách</h3>
+                    <h3 class="hobby-name">Đọc Sách</h3>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">📷</div>
-                    <h3 class="hobby-name">Chụp ảnh</h3>
+                    <h3 class="hobby-name">Chụp Ảnh</h3>
                 </div>
                 
                 <div class="hobby-card">
                     <div class="hobby-icon">⚽</div>
-                    <h3 class="hobby-name">Bóng đá</h3>
+                    <h3 class="hobby-name">Bóng Đá</h3>
                 </div>
             </div>
         </div>
@@ -267,31 +284,31 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">📞 Liên Hệ</h2>
-                <p class="section-subtitle">Thông tin liên hệ của tôi</p>
+                <h2 class="section-title">📱 Kết Nối Với Tôi</h2>
+                <p class="section-subtitle">Hãy cùng nhau tạo nên điều gì đó tuyệt vời</p>
             </div>
             
             <div class="contact-grid">
                 <div class="contact-card" onclick="window.open('tel:0706259406')">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-label">Điện thoại</div>
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-label">Điện Thoại</div>
                     <div class="contact-value">0706259406</div>
                 </div>
                 
                 <div class="contact-card" onclick="window.open('mailto:cuongndp0736@ut.edu.vn')">
-                    <div class="contact-icon">📧</div>
+                    <div class="contact-icon">✉️</div>
                     <div class="contact-label">Email</div>
                     <div class="contact-value">cuongndp0736@ut.edu.vn</div>
                 </div>
                 
                 <div class="contact-card">
                     <div class="contact-icon">📍</div>
-                    <div class="contact-label">Địa chỉ</div>
+                    <div class="contact-label">Địa Chỉ</div>
                     <div class="contact-value">Phú Hòa, Phú Yên</div>
                 </div>
                 
                 <div class="contact-card" onclick="window.open('https://github.com/cuongndp', '_blank')">
-                    <div class="contact-icon">🐙</div>
+                    <div class="contact-icon">💻</div>
                     <div class="contact-label">GitHub</div>
                     <div class="contact-value">cuongndp</div>
                 </div>
@@ -299,8 +316,8 @@
         </div>
     </section>
 
-    <script src="./js/index.js">
-        
+    <script src="js/index.js">
+       
     </script>
 </body>
 </html>
