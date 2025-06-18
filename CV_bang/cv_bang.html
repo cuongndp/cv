@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Lê Hải Bằng</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cv_bang.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#education">Học vấn</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#hobbies">Sở thích</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-palette"></i>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="cv-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="profile-image">
+                <img src="./img/anhthe.jpg" alt="Lê Hải Bằng">
+            </div>
+            <h1>Lê Hải Bằng</h1>
+            <p class="subtitle">Web Developer</p>
+            <p class="description">
+                Chào mừng đến với không gian sáng tạo của tôi! Tôi là một người đam mê công nghệ với việc phát triển các ứng dụng web hiện đại và sáng tạo.
+            </p>
+            <div class="cta-buttons">
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-user"></i>
+                    Tìm hiểu thêm
+                </a>
+                <button class="btn btn-outline" onclick="downloadCVPDF()">
+                    <i class="fas fa-download"></i>
+                    Tải CV PDF
+                </button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section reveal">
+            <h2 class="section-title">Giới thiệu bản thân</h2>
+            <div class="about-container">
+                <div class="about-content glass-card">
+                    <div class="about-text">
+                        <h3>Xin chào! Tôi là Lê Hải Bằng</h3>
+                        <p>
+                            Tôi là một Web Developer trẻ tuổi với đam mê mãnh liệt dành cho công nghệ và lập trình. 
+                            Hiện tại đang theo học ngành Công nghệ Thông tin tại Đại học Giao thông vận tải TP.HCM, 
+                            tôi luôn tìm tòi và học hỏi những công nghệ mới nhất để phát triển kỹ năng của mình.
+                        </p>
+                        <p>
+                            Tôi có khả năng làm việc 
+                            với nhiều công nghệ khác nhau từ frontend đến backend, database và cloud services. 
+                            Tôi tin rằng công nghệ có thể thay đổi thế giới và mong muốn đóng góp vào sự phát triển đó.
+                        </p>
+                        <div class="personal-qualities">
+                            <h4>Điểm mạnh của tôi:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Tư duy logic và khả năng giải quyết vấn đề tốt</li>
+                                <li><i class="fas fa-check-circle"></i> Khả năng học hỏi và thích ứng nhanh với công nghệ mới</li>
+                                <li><i class="fas fa-check-circle"></i> Tinh thần làm việc nhóm và giao tiếp hiệu quả</li>
+                                <li><i class="fas fa-check-circle"></i> Chịu được áp lực và deadline trong công việc</li>
+                                <li><i class="fas fa-check-circle"></i> Đam mê nghiên cứu và cải tiến liên tục</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="personal-info glass-card">
+                    <h3>Thông tin cá nhân</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Họ và tên</span>
+                                <span class="info-value">Lê Hải Bằng</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Ngày sinh</span>
+                                <span class="info-value">25/12/2005</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Điện thoại</span>
+                                <span class="info-value">+84 769 408 725</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">banglh1811@ut.edu.vn</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Địa chỉ</span>
+                                <span class="info-value">TP. Hồ Chí Minh</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-venus-mars"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="info-label">Giới tính</span>
+                                <span class="info-value">Nam</span>
+                            </div>
+                        </div>
+                        
+                    
+                    <div class="career-objective">
+                        <h4><i class="fas fa-target"></i> Mục tiêu nghề nghiệp</h4>
+                        <p>
+                            Trở thành một Web Developer chuyên nghiệp, có khả năng phát triển các ứng dụng 
+                            web quy mô lớn và đóng góp vào việc chuyển đổi số của doanh nghiệp. Mong muốn làm việc 
+                            trong môi trường năng động, có cơ hội học hỏi và phát triển kỹ năng liên tục.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section reveal">
+            <h2 class="section-title">Học vấn</h2>
+            <div class="education-timeline">
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">2020 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>Tốt nghiệp THPT</h3>
+                        <h4>Trường THPT Trần Quốc Tuấn (Phú Yên)</h4>
+                        <p>Tốt nghiệp với điểm trung bình 8/10. Tham gia nhiều hoạt động ngoại khóa về công nghệ.</p>
+                        <div class="achievement-badges">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">2023 - Hiện tại</div>
+                    <div class="timeline-content">
+                        <h3>Cử nhân Công nghệ Thông tin</h3>
+                        <h4>Đại học Giao thông vận tải TP.HCM</h4>
+                        <p>Hiện đang học năm thứ 2, chuyên ngành Công nghệ thông tin. Tích cực tham gia các dự án học tập và nghiên cứu về phát triển web. GPA: 3.0/4.0</p>
+                        <div class="achievement-badges">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">2023-Hiện tại</div>
+                    <div class="timeline-content">
+                        <h3>Chứng chỉ</h3>
+                        <h4>Không có</h4>
+                        <p>Đang nỗ lực để đạt được những thành tựu đáng kể trong lĩnh vực web development</p>
+                        <div class="achievement-badges">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section reveal">
+            <h2 class="section-title">Kỹ năng & Công nghệ</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="75"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="80"></div>
+                            </div>
+                            <span>80%</span>
+                        </div>
+                    </div>
+            
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="75"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="75"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PHP</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="65"></div>
+                            </div>
+                            <span>65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Database & Tools</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">MySQL</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="75"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="70"></div>
+                            </div>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">UML</span>
+                        <div class="skill-level">
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-level="75"></div>
+                            </div>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- Projects Section -->
+        <section id="projects" class="section reveal">
+            <h2 class="section-title">Dự án nổi bật</h2>
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-image"><img src="./img/cv.jpg" alt="cv"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            Trang web portfolio cá nhân được thiết kế với công nghệ hiện đại, sử dụng HTML5, CSS3 và JavaScript vanilla. Tích hợp các hiệu ứng animation mượt mà và responsive design hoàn hảo.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="" class="project-link demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo
+                            </a>
+                            <a href="https://github.com/haibang25" class="project-link code">
+                                <i class="fab fa-github"></i>
+                                 Code 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image"><img src="./img/doan.jpg" alt="doan"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Hệ thống Quản lý Đào tạo</h3>
+                        <p class="project-description">
+                            Đồ án nhóm phát triển hệ thống quản lý đào tạo sinh viên với đầy đủ tính năng CRUD, phân quyền người dùng và báo cáo thống kê. Sử dụng kiến trúc MVC và thiết kế UML chuẩn.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">TKGDHT</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">UML</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1CUEl0TSLoMkjQIUG25p-ta_OwgQ1lmYh/view?usp=sharing" class="project-link demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                Demo
+                            </a>
+                            <a href="https://github.com/haibang25" class="project-link code">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="section reveal">
+            <h2 class="section-title">Sở thích & Đam mê</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card glass-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Lập trình</h3>
+                    <p>Đam mê khám phá các công nghệ mới, tham gia open source projects và coding challenges trên LeetCode, HackerRank.</p>
+                </div>
+
+                <div class="hobby-card glass-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Đọc sách</h3>
+                    <p>Yêu thích đọc sách về công nghệ, phát triển bản thân. Đặc biệt quan tâm đến các xu hướng AI và Machine Learning.</p>
+                </div>
+
+                <div class="hobby-card glass-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gaming</h3>
+                    <p>Chơi game để thư giãn và rèn luyện tư duy logic. Thích các game chiến thuật và puzzle games.</p>
+                </div>
+
+                <div class="hobby-card glass-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Nhiếp ảnh</h3>
+                    <p>Chụp ảnh landscape và street photography. Sử dụng kỹ năng design để chỉnh sửa ảnh và tạo content.</p>
+                </div>
+
+                <div class="hobby-card glass-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Du lịch</h3>
+                    <p>Khám phá những địa điểm mới, trải nghiệm văn hóa khác nhau và tìm hiểu về công nghệ tại các quốc gia khác.</p>
+                </div>
+
+                <div class="hobby-card glass-card">
+                    <div class="hobby-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Thể thao</h3>
+                    <p>Tập gym và chạy bộ để duy trì sức khỏe. Tin rằng thể chất tốt giúp tăng hiệu suất làm việc.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section reveal">
+            <h2 class="section-title">Liên hệ với tôi</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Điện thoại</h4>
+                            <p>+84 769 408 725</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>banglh1811@ut.edu.vn</a></p>
+                        </div>
+                    </div>
+                  
+
+                    <a href="https://www.facebook.com/le.bang.413400">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Facebook</h4>
+                                <p>lebang2005.com</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Địa chỉ</h4>
+                            <p>TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/haibang25">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Github</h4>
+                            <p>github.com</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Chủ đề</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tin nhắn</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Gửi tin nhắn
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/haibang25" class="social-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/le.bang.413400" class="social-link">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 Lê Hải Bằng. Được thiết kế với ❤️ và công nghệ hiện đại.</p>
+    </footer>
+
+    <script src="cv_bang.js"></script>
+</body>
+</html>
